@@ -35,7 +35,7 @@ const ListCard = (props) => {
         <p className={!props.completed ? 'error' : null}>
           {time === undefined ? 'no time' : time}
         </p>
-        <h4 style={{ cursor: 'pointer' }} onClick={() => navigate('/' + id)}>
+        <h4 style={{ cursor: 'pointer' }} onClick={handleDelete? () => navigate('/' + id) : null}>
           {title}
         </h4>
       </div>
@@ -43,7 +43,7 @@ const ListCard = (props) => {
         <Link className='link' to={'/'}>
           Home
         </Link>
-      ) : null}
+      ) :null}
     </>
   );
 };
