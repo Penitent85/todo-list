@@ -78,6 +78,27 @@ const Todo = () => {
     <>
       <form className='form' onSubmit={handleSubmit}>
         <input
+        onCopy={()=>toast('copied successfully', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+        })}
+        onPaste={()=>toast('pasted successfully', {
+          position: 'top-right',  
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+        })}
+
           onChange={(e) => setTitle(e.target.value)}
           className='input'
           type='text'
